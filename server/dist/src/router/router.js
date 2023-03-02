@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const get_all_timers_controller_1 = require("./../controller/get-all-timers.controller");
+const set_timer_controller_1 = require("../controller/set-timer.controller");
+const express_1 = require("express");
+const get_timer_status_controller_1 = require("../controller/get-timer-status.controller");
+exports.router = (0, express_1.Router)();
+exports.router.post("/set-timer", set_timer_controller_1.setTimerController);
+exports.router.get("/get-timer-status/:id", get_timer_status_controller_1.getTimerStatusController);
+exports.router.get("/get-all-timers", get_all_timers_controller_1.getAllTimersController);
