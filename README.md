@@ -1,5 +1,9 @@
 ˘# Full Stack Project WebhookURL
 
+install dependencies : npm install
+
+deploy and run application : npm run deploy
+
 ## Backend API
 
 - I've created 3 apis with Node js TypeScript:
