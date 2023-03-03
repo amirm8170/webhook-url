@@ -17,3 +17,30 @@ for example if webhookUrl is equal to "http://www.forexample.com". after the tim
 3 - /get-all-timers (GET) : I think this is clear. this api will return all ACTIVE webhookUrls with id and secondsLeft to expired from db.
 
 - always there is an important middleware in my projects, I mean CustomError middleware. because all errors in response should have a single format to handle them easier and better in client-side. so this middleware is so important to handle errors and return them clear.
+
+## Frontend side
+
+The packages that I used in this project : 
+{
+ "axios": for http requests,
+ "react-notifications-component": to show notifications and http responses,
+ "styled-components": for styling,
+}
+There is a dir that named services. In this dir I wrote a method (Api) and I use it to http requests (get and post ).
+There is a dir that named utils. In this dir I wrote two method ( notif & validation ).
+notif is used for notifications and showing response of requests and I use react-notification library for this.
+validation is a method that used to check validation of values of each input.
+There are some component (button , input)
+
+There is Home component that involve 2 components ( Hero & Table )
+In Hero component there is a form and when user submit times and url it send data to backend and refresh table to give a new update of timers.
+
+In table component there is a table to show the timers.
+In each render it update data from backend and give remain seconds and convert it to a countdown timer in hh:mm:ss format.
+If timers less than 5 min the color of timer change to red color.
+If timer finishes, it is removed from table and send request to backend to update again the table with a new data.
+
+The titles of table is an input and user can search in table with url and id.
+If the id that entered isn't available, table shows a button to check online from backend.
+And when click the button, id send to backend to check id and after that It show the response of backend.
+
